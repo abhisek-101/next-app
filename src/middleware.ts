@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
 
     const path = request.nextUrl.pathname;
 
-    const isPublicPath = path === '/signup' || path === '/login'
+    const isPublicPath = path === '/signup' || path === '/login' || path == '/verify-email'
     const token = request.cookies.get('token')?.value || ""
 
     if(isPublicPath && token){
@@ -25,6 +25,7 @@ export const config = {
     '/profile',
     '/login',
     '/signup',
-    '/profile/:id*'
+    '/profile/:id*',
+    '/verify-email'
   ]
 }
