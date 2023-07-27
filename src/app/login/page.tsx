@@ -28,7 +28,7 @@ const LoginPage = () => {
       setLoading(true);
       const response = await axios.post("/api/user/login",user);
       console.log(response)
-      router.push(`/profile/${user.email}`)
+      router.push(`/profile`)
     }catch(error){
       prompt("login action failed!!")
     }finally{
@@ -45,7 +45,7 @@ const LoginPage = () => {
         <div className="flex flex-col mb-2">
         <label htmlFor="email" className=" text-sm">Email</label>
         <input
-          className="p-2 mb-2 rounded-lg focus:outline-none"
+          className="p-2 mb-2 rounded-lg focus:outline-none text-black"
           id="email"
           type="text"
           value={user.email}
