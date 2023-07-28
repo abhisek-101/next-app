@@ -4,12 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios  from "axios";
-import { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title: 'Sign up',
-  description: 'Get your self account to get full access of this problem',
-}
+
 const SignUpPage = () => {
   const router = useRouter()
   const [user, setUser] = useState({

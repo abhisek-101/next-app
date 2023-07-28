@@ -4,12 +4,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title: 'Login',
-  description: 'You are one step closer to it',
-}
 
 const LoginPage = () => {
   const router = useRouter()
