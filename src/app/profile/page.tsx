@@ -4,10 +4,16 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { Metadata } from 'next'
 
 const LazyComponent = dynamic(() => import("@/components/DisplayList"), {
   loading: () => <div className="text-orange-400 font-bold bg-white">Loading.................</div>
 });
+ 
+export const metadata: Metadata = {
+  title: 'My Profile',
+  description: 'Profile page of user by next js app',
+}
 
 const ProfilePage = () => {
   const router = useRouter();

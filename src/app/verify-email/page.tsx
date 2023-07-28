@@ -2,7 +2,12 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
-
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Verify Email',
+  description: 'Verify your email',
+}
 const VerifyPage = () => {
 
     const router = useRouter()
